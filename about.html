@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Movie - Inside Out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe680, #81d4fa);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #050505;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #b7b7b7c6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background-color: #8e8d8dc6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(pink #fbfb8c  253, 217, 217);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            text-align: center;
+            color: #333;
+        }
+        .team, .awards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-card, .award-card {
+            background: linear-gradient(to bottom,#ff4160 #feb0d9);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(254, 160, 160, 0.778);
+        }
+        .team-card img, .award-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .team-card h3, .award-card h3 {
+            color: #000000;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <button class="back-button" onclick="history.back()">Back</button>
+    
+    <header>
+        <h1>About Inside Out</h1>
+        <p>Discover the story behind the magic!</p>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Movie Overview</h2>
+            <p>
+                Inside Out is a groundbreaking animated film that delves into the emotions of an 11-year-old girl named Riley. 
+                The story beautifully captures the essence of emotions like Joy, Sadness, Anger, Fear, and Disgust as they navigate 
+                her world. This movie not only entertains but also teaches us about emotional intelligence and personal growth.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>Creative Team</h2>
+            <div class="team">
+                <div class="team-card">
+                    <img src="director.jpg" alt="Director">
+                    <h3>Pete Docter</h3>
+                    <p>Director</p>
+                </div>
+                <div class="team-card">
+                    <img src="writer.jpg" alt="Writer">
+                    <h3>Michael Arndt</h3>
+                    <p>Writer</p>
+                </div>
+                <div class="team-card">
+                    <img src="voice.png.webp" alt="Voice Actor">
+                    <h3>Amy Poehler</h3>
+                    <p>Voice of Joy</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Awards & Recognition</h2>
+            <div class="awards">
+                <div class="award-card">
+                    <img src="oscar.png.webp" alt="Oscar">
+                    <h3>Oscar Winner</h3>
+                    <p>Best Animated Feature Film</p>
+                </div>
+                <div class="award-card">
+                    <img src="golden.jpg" alt="Golden Globe">
+                    <h3>Golden Globe</h3>
+                    <p>Best Animated Feature Film</p>
+                </div>
+                <div class="award-card">
+                    <img src="bafta.jpg" alt="BAFTA">
+                    <h3>BAFTA</h3>
+                    <p>Best Animated Film</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Inside Out Fansite | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+

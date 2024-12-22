@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside Out Fun Game</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom, #ffe680 #81d4fa);
+            color: lightgoldenrodyellow;
+            text-align: center;
+            padding: 20px;
+        }
+        header {
+            background-color: #fd768f;
+            color: #fffefe;
+            padding: 20px;
+            font-size: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #b7b7b7c6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .game-container {
+            background: scroll turquoise;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            margin: 0 auto;
+        }
+        .question {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .option-button {
+            background-color: rgb(255, 146, 164);
+            color:white;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .option-button:hover {
+            background-color: #ff5252;
+        }
+        .result {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #555;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #ffb3c1;
+            padding: 10px;
+            color: #fff;
+            margin-top: 30px;
+            font-size: 1rem;
+            border-radius: 10px;
+        }
+        .emoji {
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="back-button" onclick="goBack()">Back</button>
+    Inside Out Emotion Game 🎮
+</header>
+
+<div class="game-container">
+    <h2 class="question">What makes you feel happiest?</h2>
+    <div class="options">
+        <button class="option-button" onclick="showResult('Joy')">Spending time with friends</button>
+        <button class="option-button" onclick="showResult('Sadness')">Thinking about memories</button>
+        <button class="option-button" onclick="showResult('Anger')">Standing up for myself</button>
+        <button class="option-button" onclick="showResult('Fear')">Staying safe and cautious</button>
+        <button class="option-button" onclick="showResult('Disgust')">Eating yummy food</button>
+    </div>
+
+    <div id="result" class="result" style="display:none;">
+        <h3>Your Emotion is:</h3>
+        <p id="emotion"></p>
+        <p class="emoji" id="emotion-emoji"></p>
+    </div>
+</div>
+
+<script>
+    function showResult(emotion) {
+        let resultText = "";
+        let emoji = "";
+
+        if (emotion === 'Joy') {
+            resultText = "You are full of energy and always bring joy to others!";
+            emoji = "😊";
+        } else if (emotion === 'Sadness') {
+            resultText = "You are thoughtful and reflect on meaningful memories.";
+            emoji = "😢";
+        } else if (emotion === 'Anger') {
+            resultText = "You stand up for what's right and show courage!";
+            emoji = "😡";
+        } else if (emotion === 'Fear') {
+            resultText = "You are cautious and always think ahead to stay safe.";
+            emoji = "😨";
+        } else if (emotion === 'Disgust') {
+            resultText = "You have great taste and prefer to stay classy!";
+            emoji = "🤢";
+        }
+
+        document.getElementById('emotion').textContent = resultText;
+        document.getElementById('emotion-emoji').textContent = emoji;
+        document.getElementById('result').style.display = 'block';
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
